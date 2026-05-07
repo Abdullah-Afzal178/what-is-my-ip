@@ -2,7 +2,7 @@
 
 `What Is My IP` is a responsive Next.js web tool that detects a visitor's public IP address and shows geolocation, network, timezone, currency, and map details using the ipgeolocation.io API.
 
-![Screenshot placeholder](./public/screenshot-placeholder.svg)
+![Screenshot placeholder](./public/tool.png)
 
 ## Features
 
@@ -61,4 +61,3 @@ Deploy on Vercel:
 - The app uses a session cookie plus an in-memory cache to avoid repeating the lookup during the same browser session.
 - For production accuracy, the server attempts to use the visitor IP from proxy headers. If only a local or private IP is available, it falls back to the caller-IP API behavior.
 - Powered by ipgeolocation.io.
-

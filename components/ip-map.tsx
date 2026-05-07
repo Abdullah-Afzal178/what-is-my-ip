@@ -7,6 +7,7 @@ type IpMapProps = {
   countryName: string;
   latitude: number;
   longitude: number;
+  className?: string;
 };
 
 const IpMapCanvas = dynamic(
@@ -14,7 +15,7 @@ const IpMapCanvas = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-[320px] items-center justify-center rounded-3xl border border-slate-200 bg-white shadow-sm">
+      <div className="flex h-full min-h-[220px] items-center justify-center rounded-3xl border border-slate-200 bg-white shadow-sm">
         <p className="text-sm font-medium text-slate-500">Loading map...</p>
       </div>
     ),
@@ -24,4 +25,3 @@ const IpMapCanvas = dynamic(
 export function IpMap(props: IpMapProps) {
   return <IpMapCanvas {...props} />;
 }
-

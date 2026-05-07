@@ -54,37 +54,33 @@ async function IpLookupContent() {
   const { data } = result;
 
   return (
-    <main className="min-h-screen bg-stone-50">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8">
-        <section className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+    <main className="min-h-screen bg-stone-50 lg:h-screen lg:overflow-hidden">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-4 py-4 sm:px-6 lg:h-full lg:min-h-0 lg:py-3">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.08em] text-sky-700">
-                Automatic IP detection
+                Your IP
               </p>
-              <div className="mt-4 flex flex-wrap items-center gap-4">
+              <div className="mt-3 flex flex-wrap items-center gap-3">
                 {data.countryFlag ? (
                   <img
                     src={data.countryFlag}
                     alt={`${data.countryName} flag`}
-                    className="h-12 w-12 rounded-full border border-slate-200 object-cover"
+                    className="h-10 w-10 rounded-full border border-slate-200 object-cover"
                   />
                 ) : null}
-                <h1 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+                <h1 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl xl:text-[2.55rem]">
                   {data.ip}
                 </h1>
               </div>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-                {data.countryName} {data.city !== "Unavailable" ? `• ${data.city}` : ""}
-                {result.cached ? " • Loaded from your current session cache." : ""}
-              </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
               <CopyIpButton ip={data.ip} />
               <Link
                 href="/ip-lookup"
-                className="inline-flex min-w-44 items-center justify-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
+                className="inline-flex min-w-44 items-center justify-center gap-2 rounded-full bg-slate-950 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-slate-800"
               >
                 <span className="whitespace-nowrap text-white">Lookup Another IP</span>
                 <ArrowRight className="h-4 w-4 shrink-0 text-white" />
@@ -93,10 +89,12 @@ async function IpLookupContent() {
           </div>
         </section>
 
-        <IpDetailsSections data={data} />
-      </div>
+        <div className="lg:min-h-0 lg:flex-1">
+          <IpDetailsSections data={data} compact />
+        </div>
 
-      <PoweredByBadge />
+        <PoweredByBadge compact className="lg:pt-0" />
+      </div>
     </main>
   );
 }
