@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#f8fafc" />
+  <rect x="80" y="80" width="1040" height="515" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="6" />
+  <rect x="140" y="140" width="240" height="22" rx="11" fill="#0ea5e9" opacity=".25" />
+  <rect x="140" y="196" width="520" height="68" rx="18" fill="#0f172a" opacity=".12" />
+  <rect x="140" y="290" width="180" height="48" rx="24" fill="#0f172a" opacity=".08" />
+  <rect x="340" y="290" width="240" height="48" rx="24" fill="#0ea5e9" opacity=".12" />
+  <g fill="#ffffff" stroke="#cbd5e1" stroke-width="4">
+    <rect x="140" y="386" width="210" height="130" rx="20" />
+    <rect x="372" y="386" width="210" height="130" rx="20" />
+    <rect x="604" y="386" width="210" height="130" rx="20" />
+    <rect x="836" y="386" width="224" height="130" rx="20" />
+  </g>
+  <text x="600" y="620" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="30">
+    Screenshot placeholder
+  </text>
+</svg>
+
